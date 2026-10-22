@@ -15,8 +15,15 @@
       <div class="container header-content">
 
         <img src="assets/img/logo Marea horizontal.png" alt="logo">
-        <nav>
-
+        <img src="assets/icons/menu.svg" alt="menu" id="header-menu">
+        <nav id="header-nav">
+          <div class="account-info">
+            <img src="assets/icons/account.svg" alt="account_icon">
+            <div>
+              <h3>Sergi Vinent</h3>
+              <p class="text-secondary">svinent19967@iesgithub.com</p>
+            </div>
+          </div>
           <a href="./explorar.html">Explorar</a>
           <a href="./account.html">Mi cuenta</a>
         </nav>
@@ -49,9 +56,9 @@
                 Seleccionar fechas
             </label>
             <div class="unified-input-box">
-              <input type="date" class="input-date-in" id="inputEntrada" placeholder="Fecha entrada">
+              <input type="date" class="input-date-in" id="inputEntrada" placeholder="Fecha entrada" required>
               -
-              <input type="date" class="input-date-out" placeholder="Fecha salida">
+              <input type="date" class="input-date-out" placeholder="Fecha salida" required>
             </div>
           </div>
 
@@ -62,9 +69,9 @@
                 Selecciona ocupación
             </label>
             <div class="unified-input-box">
-              <input type="number" class="input-adults" id="inputAdults" value="1">
-              <input type="number" class="input-kids" value="0">
-              <input type="number" class="input-babies" value="0">
+              <input type="number" class="input-adults" id="inputAdults" value="1" min="1" required>
+              <input type="number" class="input-kids" value="0" min="0" required>
+              <input type="number" class="input-babies" value="0" min="0" required>
           
             </div>
           </div>
@@ -75,6 +82,32 @@
             </form>
       </section>
       
+      <section class="container">
+        <div class="section-heading">
+          <h2>Alojamientos de moda</h2>
+        </div>
+
+      </section>
+      
     </main>
+    <footer>
+        <div class="container footer-content">
+
+          <div class="footer-brand">
+            <img src="assets/img/logo Marea horizontal.png" alt="logo">
+            <!-- <p>Encuentra tu lugar junto al Mediterráneo</p> -->
+          </div>
+          <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Soporte</a>
+            <a href="#">Contacto</a>
+            <a href="#">Redes sociales</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marea. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

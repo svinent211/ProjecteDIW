@@ -7,6 +7,7 @@
     --white: #FFFFFF;  
     --tags: #F4BD5F;
 
+    --brand-20: rgba(23, 107, 135, 0.2);
     /* Fonts */
     --font-heading: 'Fjalla One', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -38,7 +39,7 @@ body {
 /* Header */
 header {
     background-color: var(--background);
-    border: 1px solid var(--text-2);
+    border: 3px solid var(--text-2);
     padding: 20px;
 }
 .header-content {
@@ -47,18 +48,57 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+header a {
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--text);
+}
 img[alt="logo"] {
     height: 100px;
 }
+#header-menu {
+    width: 45px;
+}
+#header-nav {
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+}
+.account-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
 /* Footer */
+footer {
+    background-color: var(--brand-20);
+
+}
+.footer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px
+}
+.footer-bottom {
+    text-align: center;
+}
 
 main {
     padding: 20px;
+
 }
 .card {
     background-color: var(--white);
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +111,9 @@ main {
     display: flex;
     flex-direction: column;
     gap:20px;
+}
+input, select {
+    padding: 5px;
 }
 .unified-input-box *{
     border: none;
@@ -87,13 +130,51 @@ main {
 }
 
 
-/* Elementos */
+/* Estilos base */
 .btn {
     background-color: var(--brand);
     color: var(--white);
     border-radius: 5px;
+    max-width: 200px;
+    align-self: center;
+}
+.btn:hover {
+    cursor: pointer;
+}
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+.text-secondary {
+    color: var(--text-2);
+}
+.section-heading {
+    text-align: center;
 }
 
 
 
 
+
+
+@media (min-width: 1024px) {
+
+    /* Header */
+    #header-menu {
+        display: none;
+    }
+    #header-nav {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+
+    /* Footer */
+    .footer-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer-links a {
+        width: 30%;
+    }
+}
