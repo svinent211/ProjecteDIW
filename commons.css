@@ -1,0 +1,99 @@
+:root {
+    /* Colors */
+    --text: #00100B;
+    --text-2: #64748B;
+    --background: #EDF2F4;
+    --brand: #176B87;
+    --white: #FFFFFF;  
+    --tags: #F4BD5F;
+
+    /* Fonts */
+    --font-heading: 'Fjalla One', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+@font-face {
+    font-family: 'Fjalla One';
+    src: url(./assets/fonts/FjallaOne-Regular.ttf);
+}
+@font-face {
+    font-family: 'DM Sans';
+    src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--font-body);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--background);
+    border: 1px solid var(--text-2);
+    padding: 20px;
+}
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+img[alt="logo"] {
+    height: 100px;
+}
+
+/* Footer */
+
+main {
+    padding: 20px;
+}
+.card {
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+/* Form */
+.search-card form {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.unified-input-box *{
+    border: none;
+}
+.unified-input-box, input, select {
+    background-color: transparent;
+    border: 3px solid var(--text-2);
+    border-radius: 5px;
+    width: 100%;
+}
+.unified-input-box {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Elementos */
+.btn {
+    background-color: var(--brand);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+
+
+

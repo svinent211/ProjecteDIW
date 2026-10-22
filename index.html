@@ -7,39 +7,49 @@
     <title>Marea</title>
       <link rel="icon" href="./assets/icons/Marea favicon claro.png" media="(prefers-color-scheme: light)">
       <link rel="icon" href="./assets/icons/logo Marea favicon.png" media="(prefers-color-scheme: dark)">   
+      <link rel="stylesheet" href="commons.css">
+      <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<div>
     <header>
-      <img src="assets/img/logo Marea horizontal.png" alt="logo">
-      <a href="./explorar.html">Explorar</a>
-      <a href="./account.html">Mi cuenta</a>
-    </header>
+      <div class="container header-content">
 
+        <img src="assets/img/logo Marea horizontal.png" alt="logo">
+        <nav>
+
+          <a href="./explorar.html">Explorar</a>
+          <a href="./account.html">Mi cuenta</a>
+        </nav>
+      </div>
+    </header>
     <main>
-      <section class="search-card">
-        <form action="">
+      <section class="container card search-card">
+        <form action="" method="">
           <div class="form-group">
 
             <label for="destination">
               <img src="assets/icons/location.svg" alt="Icono ubicación">
                 Indica el destino
               </label>
+              <div>
+                
                 <select id="destination" class="input-control">
                   <option value="" disabled selected>A donde vas?</option>
                   <option value="madrid">Madrid</option>
                   <option value="barcelona">Barcelona</option>
                   <option value="paris">París</option>
                 </select>
+              </div>
           </div>
 
           <div class="form-group">
 
-            <label>
+            <label for="inputEntrada">
               <img src="assets/icons/calendar.svg" alt="Icono fechas">
                 Seleccionar fechas
             </label>
             <div class="unified-input-box">
-              <input type="date" class="input-date-in" placeholder="Fecha entrada">
+              <input type="date" class="input-date-in" id="inputEntrada" placeholder="Fecha entrada">
               -
               <input type="date" class="input-date-out" placeholder="Fecha salida">
             </div>
@@ -47,23 +57,24 @@
 
           <div class="form-group">
 
-            <label>
+            <label for="inputAdults">
               <img src="assets/icons/group.svg" alt="Icono ocupacion">
                 Selecciona ocupación
             </label>
             <div class="unified-input-box">
-              <input type="number" class="input-adults" value="1">
+              <input type="number" class="input-adults" id="inputAdults" value="1">
               <input type="number" class="input-kids" value="0">
               <input type="number" class="input-babies" value="0">
           
             </div>
           </div>
           
-
+          <input type="submit" value="Buscar" class="btn">
               
 
             </form>
       </section>
+      
     </main>
 </body>
 </html>
