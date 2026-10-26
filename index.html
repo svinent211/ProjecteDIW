@@ -10,7 +10,6 @@
       <link rel="stylesheet" href="commons.css">
       <link rel="stylesheet" href="index.css">
 </head>
-<div>
     <header>
       <div class="container header-content">
 
@@ -38,15 +37,12 @@
               <img src="assets/icons/location.svg" alt="Icono ubicación">
                 Indica el destino
               </label>
-              <div>
-                
                 <select id="destination" class="input-control">
                   <option value="" disabled selected>A donde vas?</option>
                   <option value="madrid">Madrid</option>
                   <option value="barcelona">Barcelona</option>
                   <option value="paris">París</option>
                 </select>
-              </div>
           </div>
 
           <div class="form-group">
@@ -69,22 +65,45 @@
                 Selecciona ocupación
             </label>
             <div class="unified-input-box">
-              <input type="number" class="input-adults" id="inputAdults" value="1" min="1" required>
-              <input type="number" class="input-kids" value="0" min="0" required>
-              <input type="number" class="input-babies" value="0" min="0" required>
+              <input type="number" class="input-adults input-occupancy" id="inputAdults" value="1" min="1" required>
+              <input type="number" class="input-kids input-occupancy" value="0" min="0" required>
+              <input type="number" class="input-babies input-occupancy" value="0" min="0" required>
           
             </div>
           </div>
           
-          <input type="submit" value="Buscar" class="btn">
+          <input type="submit" value="Buscar" class="btn" id="btnBuscar">
               
 
             </form>
       </section>
       
-      <section class="container">
+      <section class="container card">
         <div class="section-heading">
           <h2>Alojamientos de moda</h2>
+        </div>
+        <div class="carrousel">
+          <div class="alojamiento-card">
+            <div class="card-div-image">
+              <img src="./assets/img/room.jpg" alt="Imagen de la habitación">
+              <button class="btn-favorito">
+                <img src="./assets/icons/favorite.svg" alt="favorite">
+              </button>
+            </div>
+            <div class="card-div-info">
+              <h3>Beautiful studio Madrid Rio - 2 Pax - 1 Bath</h3>
+              <p class="text-secondary ubicacion">
+                <img src="./assets/icons/location.svg" alt="">Madrid Rio/Matadero, 42</p>
+            </div>
+            <div class="card-footer">
+              <div class="valoracion">
+                <span>★ 4.8</span>
+              </div>
+              <span class="precio">120€ / noche</span>
+              </div>
+
+
+          </div>
         </div>
 
       </section>
