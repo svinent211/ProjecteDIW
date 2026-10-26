@@ -149,6 +149,7 @@ h1, h2, h3, h4 {
 }
 .section-heading {
     text-align: center;
+    padding: 15px;
 }
 .card {
     background-color: var(--white);
@@ -156,19 +157,17 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-}
-.card, .alojamiento-card {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 1px solid var(--brand-20);
-
 }
+
+
 .card-div-image {
     position: relative;
-    height: 200px; /* Altura fija para las fotos */
-    background-color: #ccc; /* Color de fondo mientras carga la foto */
+    height: 200px; 
+    width: 100%;
 }
 .card-div-image img {
     width: 100%;
@@ -190,6 +189,37 @@ h1, h2, h3, h4 {
     justify-content: center;
 }
 
+/* Carrousel */
+.carrousel {
+    display: flex;
+    gap: 20px; 
+    padding-bottom: 20px; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    
+}
+.carrousel::-webkit-scrollbar {
+    display: none;
+}
+.carrousel .alojamiento-card {
+  /* Ancho de la tarjeta, minimo, ideal, maximo */
+  flex: 0 0 clamp(260px, 30vw, 350px);
+  
+  scroll-snap-align: center;
+}
+.alojamiento-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--brand-20);
+}
+.card-div-info{
+    padding: 0 10px;
+}
+.card-footer {
+    padding: 10px;
+}
 
 
 
@@ -224,4 +254,5 @@ h1, h2, h3, h4 {
     .footer-links a {
         width: 30%;
     }
+
 }
