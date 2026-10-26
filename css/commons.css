@@ -64,12 +64,17 @@ img[alt="logo"] {
 #header-nav {
     display: none;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 .account-info {
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+.header-links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
 }
 
 /* Footer */
@@ -232,7 +237,7 @@ h1, h2, h3, h4 {
     }
     #header-nav {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 
     /* Seach card */
