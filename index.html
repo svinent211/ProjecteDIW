@@ -11,20 +11,21 @@
       <link rel="stylesheet" href="css/index.css">
 </head>
     <header>
-      <div class="container header-content">
+      <div class="header-content">
 
         <img src="assets/img/logo Marea horizontal.png" alt="logo">
-        <img src="assets/icons/menu.svg" alt="menu" id="header-menu">
+        <i data-lucide="menu" id="header-menu" width="50" height="50"></i>
         <nav id="header-nav">
           <div class="account-info">
-            <img src="assets/icons/account.svg" alt="account_icon">
+            <!-- <i data-lucide="circle-user-round" alt="account_icon"></i> -->
+            <img src="assets/icons/account.svg" >
             <div>
               <h3>Sergi Vinent</h3>
               <p class="text-secondary">svinent19967@iesgithub.com</p>
             </div>
           </div>
           <div class="header-links">
-            <a href="./explorar.html">Explorar</a>
+            <a href="./index.html">Explorar</a>
             <a href="./account.html">Mi cuenta</a>
           </div>
         </nav>
@@ -36,7 +37,7 @@
           <div class="form-group">
 
             <label for="destination">
-              <img src="assets/icons/location.svg" alt="Icono ubicación">
+              <i data-lucide="map-pin"></i>
                 Indica el destino
               </label>
                 <select id="destination" class="input-control" required>
@@ -50,7 +51,7 @@
           <div class="form-group">
 
             <label for="inputEntrada">
-              <img src="assets/icons/calendar.svg" alt="Icono fechas">
+              <i data-lucide="calendar-days"></i>
                 Seleccionar fechas
             </label>
             <div class="unified-input-box">
@@ -63,7 +64,7 @@
           <div class="form-group">
 
             <label for="inputAdults">
-              <img src="assets/icons/group.svg" alt="Icono ocupacion">
+              <i data-lucide="user-group"></i>
                 Selecciona ocupación
             </label>
             <div class="unified-input-box">
@@ -89,17 +90,17 @@
             <div class="card-div-image">
               <img src="./assets/img/room.jpg" alt="Imagen de la habitación">
               <button class="btn-favorito">
-                <img src="./assets/icons/favorite.svg" alt="favorite">
+                <i data-lucide="heart"></i>
               </button>
             </div>
             <div class="card-div-info">
               <h3>Beautiful studio Madrid Rio - 2 Pax - 1 Bath</h3>
               <p class="text-secondary ubicacion">
-                <img src="./assets/icons/location.svg" alt="">Madrid Rio/Matadero, 42</p>
+                <i data-lucide="map-pin"></i>Madrid Rio/Matadero, 42</p>
             </div>
             <div class="card-footer">
               <div class="valoracion">
-                <span><img src="./assets/icons/star.svg"> 4.8</span>
+                <span><i data-lucide="star"></i> 4.8</span>
               </div>
               <span class="precio">120€ / noche</span>
               </div>
@@ -111,17 +112,17 @@
             <div class="card-div-image">
               <img src="./assets/img/room.jpg" alt="Imagen de la habitación">
               <button class="btn-favorito">
-                <img src="./assets/icons/favorite.svg" alt="favorite">
+               <i data-lucide="heart"></i>
               </button>
             </div>
             <div class="card-div-info">
               <h3>Beautiful studio Madrid Rio - 2 Pax - 1 Bath</h3>
               <p class="text-secondary ubicacion">
-                <img src="./assets/icons/location.svg" alt="">Madrid Rio/Matadero, 42</p>
+                <i data-lucide="map-pin"></i>Madrid Rio/Matadero, 42</p>
             </div>
             <div class="card-footer">
               <div class="valoracion">
-                <span><img src="./assets/icons/star.svg"> 4.8</span>
+                <span><i data-lucide="star"></i> 4.8</span>
               </div>
               <span class="precio">120€ / noche</span>
               </div>
@@ -132,17 +133,17 @@
             <div class="card-div-image">
               <img src="./assets/img/room.jpg" alt="Imagen de la habitación">
               <button class="btn-favorito">
-                <img src="./assets/icons/favorite.svg" alt="favorite">
+               <i data-lucide="heart"></i>
               </button>
             </div>
             <div class="card-div-info">
               <h3>Beautiful studio Madrid Rio - 2 Pax - 1 Bath</h3>
               <p class="text-secondary ubicacion">
-                <img src="./assets/icons/location.svg" alt="">Madrid Rio/Matadero, 42</p>
+                <i data-lucide="map-pin"></i>Madrid Rio/Matadero, 42</p>
             </div>
             <div class="card-footer">
               <div class="valoracion">
-                <span><img src="./assets/icons/star.svg"> 4.8</span>
+                <span><i data-lucide="star"></i> 4.8</span>
               </div>
               <span class="precio">120€ / noche</span>
               </div>
@@ -151,17 +152,17 @@
             <div class="card-div-image">
               <img src="./assets/img/room.jpg" alt="Imagen de la habitación">
               <button class="btn-favorito">
-                <img src="./assets/icons/favorite.svg" alt="favorite">
+               <i data-lucide="heart"></i>
               </button>
             </div>
             <div class="card-div-info">
               <h3>Beautiful studio Madrid Rio - 2 Pax - 1 Bath</h3>
               <p class="text-secondary ubicacion">
-                <img src="./assets/icons/location.svg" alt="">Madrid Rio/Matadero, 42</p>
+                <i data-lucide="map-pin"></i>Madrid Rio/Matadero, 42</p>
             </div>
             <div class="card-footer">
               <div class="valoracion">
-                <span><img src="./assets/icons/star.svg"> 4.8</span>
+                <span><i data-lucide="star"></i> 4.8</span>
               </div>
               <span class="precio">120€ / noche</span>
               </div>
@@ -192,5 +193,14 @@
             <p>&copy; 2026 Marea. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <script src="js/favorite.js"></script>
 </body>
 </html>

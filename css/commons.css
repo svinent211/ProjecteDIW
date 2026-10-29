@@ -40,11 +40,13 @@ body {
 
 /* Header */
 header {
+    padding: 0 20px;
     background-color: var(--background);
     border: 3px solid var(--text-2);
-    padding: 20px;
 }
 .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,7 +66,7 @@ img[alt="logo"] {
 #header-nav {
     display: none;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
 .account-info {
     display: flex;
@@ -74,7 +76,7 @@ img[alt="logo"] {
 .header-links {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 30px;
 }
 
 /* Footer */
@@ -168,13 +170,14 @@ h1, h2, h3, h4 {
     border: 1px solid var(--brand-20);
 }
 
-
 .card-div-image {
     position: relative;
     height: 200px; 
     width: 100%;
+
 }
 .card-div-image img {
+    border-radius: 20px 20px 0 0;
     width: 100%;
     height: 100%;
     object-fit: cover; 
@@ -192,6 +195,11 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Icons */
+i {
+    color: var(--text);
 }
 
 /* Carrousel */
@@ -215,7 +223,7 @@ h1, h2, h3, h4 {
   scroll-snap-align: center;
 }
 .alojamiento-card {
-    border-radius: 15px;
+    border-radius: 20px 20px 0 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 1px solid var(--brand-20);
 }
