@@ -5,4 +5,4 @@ headerMenu.addEventListener("click", ()=> {
     headerNav.classList.toggle("display");
 });
 
-display-none //Hacer el hr aparecer
+// display-none //Hacer el hr aparecer

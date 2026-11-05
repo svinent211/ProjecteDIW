@@ -21,11 +21,11 @@
 }
 @font-face {
     font-family: 'Fjalla One';
-    src: url('./assets/fonts/FjallaOne-Regular.ttf');
+    src: url('../assets/fonts/FjallaOne-Regular.ttf');
 }
 @font-face {
     font-family: 'DM Sans';
-    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
+    src: url('../assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
 }
 body {
     background-color: var(--background);
@@ -44,7 +44,10 @@ header {
     background-color: var(--background);
     border: 3px solid var(--text-2);
 
-    position: relative;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    z-index: 100;  /* Para que el nav desplegable no quede detras de los elementos de la pagina */
 }
 .header-content {
     /* position: relative; */
@@ -60,10 +63,17 @@ header a {
     text-decoration: none;
     color: var(--text);
 }
+.header-content > a {
+    display: flex;
+    min-width: 0;
+}
 img[alt="logo"] {
     height: 100px;
+    max-width: 100%;
+    object-fit: contain;
 }
 #header-nav-container {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -151,11 +161,15 @@ input, select {
     border: none;
 }
 .unified-input-box, input, select {
-    background-color: transparent;
+    background-color: var(--white);
     border: 3px solid var(--text-2);
     border-radius: 5px;
     width: 100%;
 }
+input:focus, select:focus {
+    border: 3px solid var(--brand);
+}
+
 .unified-input-box {
     display: flex;
     flex-direction: row;
@@ -172,6 +186,10 @@ input, select {
 }
 .btn:hover {
     cursor: pointer;
+    opacity: 90%;
+}
+.btn:active {
+    transform: scale(0.98);
 }
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
@@ -196,15 +214,15 @@ h1, h2, h3, h4 {
 
 .card-div-image {
     position: relative;
-    height: 200px; 
     width: 100%;
-
+    aspect-ratio: 4 / 3;
 }
 .card-div-image img {
-    border-radius: 20px 20px 0 0;
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
 .btn-favorito {
     position: absolute;
@@ -242,6 +260,7 @@ i {
    
     /* Para que ocupe el maximo del contenedor e ignore las card de dentro */
     width: 100%;
+    min-width: 0;
 }
 .carrousel::-webkit-scrollbar {
     display: none;
@@ -249,8 +268,18 @@ i {
 .carrousel .alojamiento-card {
   /* Ancho de la tarjeta, minimo, ideal, maximo */
   flex: 0 0 clamp(260px, 30vw, 350px);
-  
+  min-width: 0;
+  max-width: 100%;
+
   scroll-snap-align: center;
+}
+
+/* En movil, una tarjeta a ancho completo (como el wireframe) */
+@media (max-width: 767px) {
+    .carrousel .alojamiento-card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
 }
 .alojamiento-card {
     border-radius: 20px 20px 0 0;
@@ -277,8 +306,9 @@ i {
         display: flex;
         flex-direction: row-reverse;
     }
-    #header-nav hr {
+    #header-nav hr, .btn.btn-logout {
         display: none;
+        align-self: baseline;
     }
     .header-links {
         flex-direction: row;
