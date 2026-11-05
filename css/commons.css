@@ -71,19 +71,20 @@ img[alt="logo"] {
 }
 #header-menu {
     width: 45px;
+    cursor: pointer;
 }
 #header-nav {
     display: none;
     flex-direction: column;
     gap: 30px;
 
-
-    
 }
+
+
 #header-nav.display{
     display: flex;
     position: absolute;
-    top: calc(100% + 20px);
+    top: calc(100% + 3px);
     right: 20px;
 
     padding: 20px;
@@ -108,13 +109,11 @@ img[alt="logo"] {
 /* Footer */
 footer {
     background-color: var(--brand-20);
-
+    padding: 20px;
 }
 .footer-content {
-    padding: 20px;
     display: flex;
     flex-direction: column;
-
 }
 .footer-links {
     display: flex;
@@ -277,6 +276,12 @@ i {
     #header-nav {
         display: flex;
         flex-direction: row-reverse;
+    }
+    #header-nav hr {
+        display: none;
+    }
+    .header-links {
+        flex-direction: row;
     }
 
     /* Seach card */
