@@ -21,11 +21,11 @@
 }
 @font-face {
     font-family: 'Fjalla One';
-    src: url(./assets/fonts/FjallaOne-Regular.ttf);
+    src: url('./assets/fonts/FjallaOne-Regular.ttf');
 }
 @font-face {
     font-family: 'DM Sans';
-    src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
 }
 body {
     background-color: var(--background);
@@ -43,8 +43,11 @@ header {
     padding: 0 20px;
     background-color: var(--background);
     border: 3px solid var(--text-2);
+
+    position: relative;
 }
 .header-content {
+    /* position: relative; */
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -60,6 +63,12 @@ header a {
 img[alt="logo"] {
     height: 100px;
 }
+#header-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* position: relative; */
+}
 #header-menu {
     width: 45px;
 }
@@ -67,7 +76,24 @@ img[alt="logo"] {
     display: none;
     flex-direction: column;
     gap: 30px;
+
+
+    
 }
+#header-nav.display{
+    display: flex;
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 20px;
+
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--brand-20);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
 .account-info {
     display: flex;
     flex-direction: row;
@@ -75,7 +101,7 @@ img[alt="logo"] {
 }
 .header-links {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
 }
 
@@ -160,7 +186,6 @@ h1, h2, h3, h4 {
 }
 .card {
     background-color: var(--white);
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,6 +221,9 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
 }
+.display-none {
+    display: none;
+}
 
 /* Icons */
 i {
@@ -211,7 +239,10 @@ i {
     scroll-snap-type: x mandatory;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
-    
+
+   
+    /* Para que ocupe el maximo del contenedor e ignore las card de dentro */
+    width: 100%;
 }
 .carrousel::-webkit-scrollbar {
     display: none;
