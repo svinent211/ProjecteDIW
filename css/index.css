@@ -1,6 +1,22 @@
+/* Buscador de la Home */
+.search-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+}
+.form-group {
+    min-width: 0;
+}
+.input-occupancy {
+    max-width: 96px;
+}
+
+/* Ocupacion: A / N / B */
 .occupancy-box {
     gap: 8px;
-    padding: 0 0 0 8px
+    padding: 0 0 0 8px;
 }
 .occupancy-item {
     flex: 1 1 0;
@@ -21,3 +37,107 @@
     color: var(--text-2);
     cursor: help;
 }
+
+
+/* Carrusel de alojamientos */
+.carrousel {
+    display: flex;
+    gap: 24px; 
+    padding-bottom: 24px; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+
+    /* Para que ocupe el maximo del contenedor e ignore las card de dentro */
+    width: 100%;
+    min-width: 0;
+}
+.carrousel::-webkit-scrollbar {
+    display: none;
+}
+.carrousel .alojamiento-card {
+    flex: 0 0 100%;
+    min-width: 0;
+    max-width: 100%;
+    
+    scroll-snap-align: start;
+}
+
+.alojamiento-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--brand-20);
+}
+.card-div-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+.card-div-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+.btn-favorito {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favorite {
+    color: #F4BD5F;
+}
+.card-div-info{
+    padding: 0 16px;
+}
+.card-footer {
+    padding: 16px;
+}
+
+
+@media (min-width: 768px) {
+
+    /* Buscador: rejilla 2x2 en tablet */
+    .search-card form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: end;
+        width: 100%;
+    }
+    #btnBuscar {
+        align-self: end;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    /* Carrusel */
+    .carrousel .alojamiento-card {
+        /* Ancho de la tarjeta, minimo, ideal, maximo */
+        flex: 0 0 clamp(264px, 30vw, 352px);
+        scroll-snap-align: center;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    /* Buscador: una sola fila, con mas ancho para las fechas */
+    .search-card form {
+        grid-template-columns: 2.2fr 4.5fr 3.3fr 2fr;
+    }
+}
+
