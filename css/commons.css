@@ -266,21 +266,14 @@ i {
     display: none;
 }
 .carrousel .alojamiento-card {
-  /* Ancho de la tarjeta, minimo, ideal, maximo */
-  flex: 0 0 clamp(260px, 30vw, 350px);
-  min-width: 0;
-  max-width: 100%;
-
-  scroll-snap-align: center;
+    flex: 0 0 100%;
+    min-width: 0;
+    max-width: 100%;
+    
+    scroll-snap-align: start;
 }
 
-/* En movil, una tarjeta a ancho completo (como el wireframe) */
-@media (max-width: 767px) {
-    .carrousel .alojamiento-card {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-    }
-}
+
 .alojamiento-card {
     border-radius: 20px 20px 0 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -296,7 +289,7 @@ i {
 
 
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
     /* Header */
     #header-menu {
@@ -321,6 +314,13 @@ i {
     }
     #btnBuscar {
         align-self: self-end;
+    }
+    
+    /* Carrousel */
+    .carrousel .alojamiento-card {
+        /* Ancho de la tarjeta, minimo, ideal, maximo */
+        flex: 0 0 clamp(260px, 30vw, 350px);
+        scroll-snap-align: center;
     }
 
 
