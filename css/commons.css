@@ -68,7 +68,7 @@ header a {
     min-width: 0;
 }
 img[alt="logo"] {
-    height: 100px;
+    height: 96px;
     max-width: 100%;
     object-fit: contain;
 }
@@ -80,13 +80,13 @@ img[alt="logo"] {
     /* position: relative; */
 }
 #header-menu {
-    width: 45px;
+    width: 48px;
     cursor: pointer;
 }
 #header-nav {
     display: none;
     flex-direction: column;
-    gap: 30px;
+    gap: 32px;
 
 }
 
@@ -95,9 +95,9 @@ img[alt="logo"] {
     display: flex;
     position: absolute;
     top: calc(100% + 3px);
-    right: 20px;
+    right: 24px;
 
-    padding: 20px;
+    padding: 24px;
     background-color: var(--white);
     border: 1px solid var(--brand-20);
     border-radius: 5px;
@@ -108,12 +108,12 @@ img[alt="logo"] {
 .account-info {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 8px;
 }
 .header-links {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 32px;
 }
 
 /* Footer */
@@ -130,7 +130,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 30px
+    gap: 32px
 }
 .footer-bottom {
     text-align: center;
@@ -146,16 +146,20 @@ main {
 
 
 /* Form */
+input, select, button, textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
 .search-card form {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 24px;
 }
 input, select {
-    padding: 5px;
+    padding: 8px;
 }
 .input-occupancy {
-    max-width: 100px;
+    max-width: 96px;
 }
 .unified-input-box *{
     border: none;
@@ -180,7 +184,12 @@ input:focus, select:focus {
 .btn {
     background-color: var(--brand);
     color: var(--white);
+    border: none;
     border-radius: 5px;
+    padding: 8px 24px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
     max-width: 200px;
     align-self: center;
 }
@@ -199,15 +208,15 @@ h1, h2, h3, h4 {
 }
 .section-heading {
     text-align: center;
-    padding: 15px;
+    padding: 16px;
 }
 .card {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 24px;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 1px solid var(--brand-20);
 }
@@ -221,22 +230,25 @@ h1, h2, h3, h4 {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 8px 8px 0 0;
     object-fit: cover;
 }
 .btn-favorito {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
     background: var(--white);
     border: none;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.favorite {
+    color: #F4BD5F;
 }
 .display-none {
     display: none;
@@ -250,8 +262,8 @@ i {
 /* Carrousel */
 .carrousel {
     display: flex;
-    gap: 20px; 
-    padding-bottom: 20px; 
+    gap: 24px; 
+    padding-bottom: 24px; 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none; 
@@ -275,15 +287,17 @@ i {
 
 
 .alojamiento-card {
-    border-radius: 20px 20px 0 0;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border: 1px solid var(--brand-20);
 }
 .card-div-info{
-    padding: 0 10px;
+    padding: 0 16px;
 }
 .card-footer {
-    padding: 10px;
+    padding: 16px;
 }
 
 
@@ -308,18 +322,32 @@ i {
     }
 
     /* Seach card */
-    .search-card form {
+    /* .search-card form {
         flex-direction: row;
-        align-items: flex-end
+        align-items: flex-end;
     }
     #btnBuscar {
         align-self: self-end;
-    }
+    } */
+     .search-card form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: end;
+        width: 100%;
+
+     }
+     #btnBuscar {
+        align-self: end;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+     }
     
     /* Carrousel */
     .carrousel .alojamiento-card {
         /* Ancho de la tarjeta, minimo, ideal, maximo */
-        flex: 0 0 clamp(260px, 30vw, 350px);
+        flex: 0 0 clamp(264px, 30vw, 352px);
         scroll-snap-align: center;
     }
 
@@ -334,4 +362,10 @@ i {
         width: 30%;
     }
 
+}
+
+@media (min-width: 1024px) {
+    .search-card form {
+        grid-template-columns: 2.5fr 3.5fr 4fr 2fr;
+    }
 }

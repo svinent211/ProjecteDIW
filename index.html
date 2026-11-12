@@ -62,7 +62,6 @@
         </label>
         <div class="unified-input-box">
           <input type="date" class="input-date-in" id="inputEntrada" placeholder="Fecha entrada" required>
-          -
           <input type="date" class="input-date-out" placeholder="Fecha salida" required>
         </div>
       </div>
@@ -73,11 +72,19 @@
           <i data-lucide="user-group"></i>
           Selecciona ocupación
         </label>
-        <div class="unified-input-box">
-          <input type="number" class="input-adults input-occupancy" id="inputAdults" value="1" min="1" required>
-          <input type="number" class="input-kids input-occupancy" value="0" min="0" required>
-          <input type="number" class="input-babies input-occupancy" value="0" min="0" required>
-
+        <div class="unified-input-box occupancy-box">
+          <div class="occupancy-item">
+            <abbr class="occupancy-key" title="Adulto">A</abbr>
+            <input type="number" class="input-adults input-occupancy" id="inputAdults" name="adults" value="1" min="1" required>
+          </div>
+          <div class="occupancy-item">
+            <abbr class="occupancy-key" title="Niño">N</abbr>
+            <input type="number" class="input-kids input-occupancy" id="inputKids" name="kids" value="0" min="0" required>
+          </div>
+          <div class="occupancy-item">
+            <abbr class="occupancy-key" title="Bebé">B</abbr>
+            <input type="number" class="input-babies input-occupancy" id="inputBabies" name="babies" value="0" min="0" required>
+          </div>
         </div>
       </div>
 
