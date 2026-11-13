@@ -48,7 +48,6 @@ header {
     z-index: 100;  /* Para que el nav desplegable no quede detras de los elementos de la pagina */
 }
 .header-content {
-    max-width: 1200px;
     margin: 0 20px;
     display: flex;
     flex-direction: row;
